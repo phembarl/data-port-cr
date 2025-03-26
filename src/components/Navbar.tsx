@@ -24,11 +24,18 @@ const Navbar = ({ showLinks }: NavbarProps) => {
       }`}
     >
       <div className="flex items-center space-x-[12rem]">
-        <img
-          src={Logo}
-          alt=""
-          className={`${showLinks ? 'w-[30px] h-[30px]' : 'w-[50px] h-[50px]'}`}
-        />
+        <div className="flex items-center space-x-5">
+          <img
+            src={Logo}
+            alt=""
+            className={`${
+              showLinks ? 'w-[30px] h-[30px]' : 'w-[50px] h-[50px]'
+            }`}
+          />
+          {!showLinks && (
+            <p className="font-bold text-black text-xl">Credrails Take-Home</p>
+          )}
+        </div>
 
         {showLinks && (
           <ul className="flex space-x-20">
